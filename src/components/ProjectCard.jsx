@@ -1,6 +1,17 @@
 import React from 'react';
 
 const ProjectCard = ({ project }) => {
+    // URL Mapping für verschiedene Link-Typen
+    const getLinkUrl = (linkName) => {
+        const urlMap = {
+            'GitHub': project.title.toLowerCase().includes('noetra') 
+                ? 'https://github.com/kochnev-alexander/noetra'
+                : 'https://github.com/kochnev-alexander/webportfolio',
+            'In Planung': '#'
+        };
+        return urlMap[linkName] || '#';
+    };
+
     return (
         <div className="project-card">
             <div className="project-image">
@@ -16,7 +27,15 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className="project-links">
                     {project.links.map((link, index) => (
-                        <span key={index} className="project-link">{link}</span>
+                        <a 
+                            key={index}
+                            href={getLinkUrl(link)}
+                            className="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {link}
+                        </a>
                     ))}
                 </div>
             </div>

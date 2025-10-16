@@ -38,7 +38,7 @@ const About = () => {
                         <div className="about-social">
                             <div className="social-links">
                                 <a
-                                    href="https://github.com/kochnevalexander473-dev"
+                                    href="https://github.com/kochnev-alexander"
                                     className="social-link"
                                     target="_blank"
                                     rel="noopener noreferrer"

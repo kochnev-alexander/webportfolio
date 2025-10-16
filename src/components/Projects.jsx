@@ -16,7 +16,7 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: "SecureVault - Password Manager \n (COMING SOMEDAY IN THE FUTURE) ",
+            title: "SecureVault - Password Manager \n (COMING SOMEDAY IN THE FUTURE)",
             description: "Lokaler Passwort-Manager mit AES-Verschlüsselung, Passwort-Generator und Import/Export.",
             tech: "Java",
             technologies: ["Electron", "React", "Node.js", "SQLite"],
@@ -31,6 +31,15 @@ const Projects = () => {
             technologies: ["JavaFX", "SQLite", "..."],
             category: "desktop",
             links: ["In Planung"]
+        },
+        {
+            id: 4,
+            title: "Webportfolio",
+            description: "Das wunderschöne Portfolio wo sie sich grad befinden :)",
+            tech: "React",
+            technologies: ["React", "Tailwind", "Javascript"],
+            category: "web",
+            links: ["GitHub"]
         }
     ];
 
