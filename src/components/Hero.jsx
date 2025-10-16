@@ -49,12 +49,19 @@ const Hero = () => {
                         </button>
                     </div>
                 </div>
-                <div className="hero-visual">
-                    <div className="code-animation">
-                        <div className="code-line"></div>
-                        <div className="code-line"></div>
-                        <div className="code-line"></div>
-                    </div>
+                <div className="code-animation">
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
+                    <div className="code-line"></div>
                 </div>
             </div>
         </section>

@@ -9,6 +9,15 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}`);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="app">
       <Navbar />

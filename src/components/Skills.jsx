@@ -16,6 +16,7 @@ const Skills = () => {
         {
             title: "Lerne gerade",
             skills: [
+                { name: "Docker" },
                 { name: "JavaScript" },
                 { name: "TypeScript" },
                 { name: "TailScript" },
@@ -28,8 +29,7 @@ const Skills = () => {
             skills: [
                 { name: "Kubernetes" },
                 { name: "Angular" },
-                { name: "Vue.js" },
-                { name: "Docker" }
+                { name: "Vue.js" }
             ]
         }
     ];

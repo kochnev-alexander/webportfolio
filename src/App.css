@@ -1,16 +1,18 @@
 :root {
   --primary-purple: #8B5CF6;
   --primary-blue: #3B82F6;
-  --dark-bg: #0F0F1A;
+  --electric-pink: #EC4899;
+  --cyan: #06D6A0;
+  --dark-bg: #0f0c29;
   --darker-bg: #0A0A12;
   --card-bg: #1A1A2E;
   --text-primary: #FFFFFF;
   --text-secondary: #A0A0B0;
-  --accent-gradient: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
-  --card-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
-  --glow-effect: 0 0 20px rgba(139, 92, 246, 0.3);
-  --neon-glow: 0 0 10px rgba(139, 92, 246, 0.7), 0 0 20px rgba(139, 92, 246, 0.5);
-  --intense-glow: 0 0 30px rgba(139, 92, 246, 0.4), 0 0 60px rgba(139, 92, 246, 0.2);
+  --accent-gradient: linear-gradient(135deg, var(--electric-pink), var(--primary-purple), var(--cyan));
+  --card-shadow: 0 8px 32px rgba(236, 72, 153, 0.3);
+  --glow-effect: 0 0 20px rgba(236, 72, 153, 0.4);
+  --neon-glow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(139, 92, 246, 0.6);
+  --intense-glow: 0 0 30px rgba(236, 72, 153, 0.5), 0 0 60px rgba(139, 92, 246, 0.3);
 }
 
 * {
@@ -22,11 +24,8 @@
 /* === ENHANCED BODY WITH SCI-FI BACKGROUND === */
 body {
   font-family: 'Inter', sans-serif;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  background-size: 100% 400%;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -54,6 +53,7 @@ body::before {
   opacity: 0.6;
 }
 
+
 @keyframes floatParticles {
   0% {
     transform: translateY(0px) translateX(0px);
@@ -65,7 +65,7 @@ body::before {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -199,34 +199,6 @@ html {
   opacity: 0.1;
 }
 
-/* === ENHANCED HERO SECTION === */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(ellipse at top right, rgba(139, 92, 246, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
-    linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-  padding-top: 80px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-  animation: float 8s ease-in-out infinite;
-  z-index: -1;
-}
 
 @keyframes float {
 
@@ -247,6 +219,15 @@ html {
   }
 }
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -261,7 +242,8 @@ html {
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 900;
+  width: 550px;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   position: relative;
@@ -291,7 +273,7 @@ html {
 
 .hero-name {
   color: var(--text-primary);
-  font-size: 3rem;
+  font-size: 3.5m;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   position: relative;
 }
@@ -398,8 +380,8 @@ html {
 }
 
 .code-animation {
-  width: 320px;
-  height: 220px;
+  width: 520px;
+  height: 320px;
   background: var(--card-bg);
   border-radius: 16px;
   padding: 2rem;
@@ -452,7 +434,7 @@ html {
   opacity: 0.8;
   animation: pulse 2s infinite;
   box-shadow:
-    0 0 10px rgba(139, 92, 246, 0.6),
+    0 0 10px rgba(114, 57, 247, 0.6),
     0 0 20px rgba(139, 92, 246, 0.3);
   position: relative;
   overflow: hidden;
@@ -480,24 +462,65 @@ html {
 }
 
 .code-line:nth-child(1) {
-  width: 90%;
+  width: 92%;
   animation-delay: 0s;
 }
 
 .code-line:nth-child(2) {
-  width: 70%;
-  animation-delay: 0.3s;
+  width: 68%;
+  animation-delay: 0.2s;
 }
 
 .code-line:nth-child(3) {
-  width: 85%;
-  animation-delay: 0.6s;
+  width: 81%;
+  animation-delay: 0.4s;
 }
 
 .code-line:nth-child(4) {
-  width: 60%;
-  animation-delay: 0.9s;
+  width: 74%;
+  animation-delay: 0.6s;
 }
+
+.code-line:nth-child(5) {
+  width: 88%;
+  animation-delay: 0.8s;
+}
+
+.code-line:nth-child(6) {
+  width: 63%;
+  animation-delay: 1s;
+}
+
+.code-line:nth-child(7) {
+  width: 79%;
+  animation-delay: 1.2s;
+}
+
+.code-line:nth-child(8) {
+  width: 95%;
+  animation-delay: 1.4s;
+}
+
+.code-line:nth-child(9) {
+  width: 70%;
+  animation-delay: 1.6s;
+}
+
+.code-line:nth-child(10) {
+  width: 84%;
+  animation-delay: 1.8s;
+}
+
+.code-line:nth-child(11) {
+  width: 66%;
+  animation-delay: 2s;
+}
+
+.code-line:nth-child(12) {
+  width: 90%;
+  animation-delay: 2.2s;
+}
+
 
 @keyframes pulse {
 
@@ -528,6 +551,27 @@ section::before {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
   opacity: 0.3;
+}
+
+section:not(:first-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--primary-purple),
+      var(--primary-blue),
+      transparent);
+  box-shadow: var(--neon-glow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    background-position-y: calc(var(--scroll-y) * 0.3px);
+  }
 }
 
 .section-title {
@@ -668,7 +712,7 @@ section::before {
   object-fit: cover;
   border-radius: 50%;
   filter: brightness(1.05) contrast(1.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .image-placeholder {
@@ -808,26 +852,6 @@ section::before {
 }
 
 /* === ENHANCED PROJECTS SECTION === */
-.projects {
-  background:
-    radial-gradient(ellipse at top left, rgba(10, 10, 18, 0.8) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(26, 26, 46, 0.6) 0%, transparent 50%),
-    var(--darker-bg);
-  position: relative;
-}
-
-.projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-  animation: backgroundPulse 8s ease-in-out infinite alternate;
-}
 
 @keyframes backgroundPulse {
   0% {
@@ -840,19 +864,14 @@ section::before {
 }
 
 /* === IMPROVED PROJECTS GRID WITH PERFECT CENTERING === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 2.5rem;
-  width: 100%;
-}
 
-/* Zentriere wenn ungerade Anzahl */
-.projects-grid.centered-odd {
+/* === IMPROVED PROJECTS GRID WITH PERFECT CENTERING === */
+.projects-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
+  width: 100%;
 }
 
 .projects-grid.centered-odd .project-card {
@@ -860,14 +879,9 @@ section::before {
   max-width: 400px;
 }
 
-/* Für einzelnes Projekt perfekt zentrieren */
-.projects-grid:only-child,
-.projects-grid:has(> :only-child) {
-  display: flex;
-  justify-content: center;
-}
-
 .project-card {
+  flex: 0 1 380px;
+  max-width: 400px;
   background: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
@@ -877,24 +891,20 @@ section::before {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 1px solid rgba(139, 92, 246, 0.15);
   position: relative;
-  backdrop-filter: blur(10px);
 }
 
+/* PRETTY LINE - Always visible gradient border */
 .project-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background: var(--accent-gradient);
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
   box-shadow: var(--neon-glow);
-}
-
-.project-card:hover::before {
   transform: scaleX(1);
+  /* Changed from 0 to 1 - always visible */
 }
 
 .project-card:hover {
@@ -955,7 +965,6 @@ section::before {
   border-radius: 25px;
   font-size: 0.8rem;
   font-weight: 600;
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 4px 15px rgba(0, 0, 0, 0.3),
@@ -995,17 +1004,15 @@ section::before {
 }
 
 .tech-tag {
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(139, 92, 246, 0.1);
   color: var(--primary-purple);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid rgba(139, 92, 246, 0.25);
-  transition: all 0.3s ease;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.3);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(5px);
 }
 
 .tech-tag::before {
@@ -1095,7 +1102,6 @@ section::before {
   border-left: 5px solid var(--primary-purple);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
 }
 
 .skill-category::before {
@@ -1152,7 +1158,6 @@ section::before {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(5px);
 }
 
 .skill-tag::before {
